@@ -11,8 +11,7 @@ import { Observable, Timestamp } from 'rxjs';
 import { finalize, map } from 'rxjs/operators';
 
 
-//ajout PL
-import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
+
 
 
 export interface Image { id: string; imagePath: string; imageURL: string; imageName: string; maintTs: number; }
@@ -140,7 +139,7 @@ export class GalleryComponent implements OnInit {
     this.modalImage = image;
     this.noteSvc.setNotification(
       image.imageName,
-      image.imagePath
+      image.imageURL
       );
       $('.max-img-notification-btn').click();
   }

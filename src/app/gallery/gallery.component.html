@@ -56,14 +56,15 @@
   <h2 class="display-4 text-center">Your Images </h2>
   <hr>
   <div class="row">
-    <div class="col-md-3 mb-3 sm-2 xs-1 d-flex align-items-stretch"
+    <div class="col-md-3 mb-3 sm-2 xs-1 d-flex justify-content-center"
     *ngFor="let image of images | async">
-        <div class="card">
+        <div class="card" style="width: 14
+        rem;">
             <div class="view"
             (click)="maximizeImage(image)"
             data-toggle="modal"
             data-target="#product-dtl">
-                  <img class="img-fluid"
+                  <img class="img-fluid mx-auto" 
                   data-src="{{image.imageURL}}"
                   alt="Card image cap"
                   style="cursor: pointer; height: 150px"
